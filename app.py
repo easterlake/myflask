@@ -12,7 +12,7 @@ app = Flask(__name__)
 def hello_world():
     version = sys.version_info
     res = (
-        "<h1>Hello my friends</h1>"
+        "<h1>Hi fellow devs on seenode</h1>"
         f"<h2>{os.getenv('ENV')}</h2></br>"
         f"Running Python: {version.major}.{version.minor}.{version.micro}<br>"
         f"Hostname: {socket.gethostname()}"
