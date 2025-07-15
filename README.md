@@ -1,6 +1,6 @@
 # Minimal Python Flask App
 
-A minimal Python Flask application designed for cloud provider documentation. It's simple, yet complete enough for deployment.
+A minimal Python Flask application to deploy on [Seenode](https://seenode.com).
 
 ## Key Features
 
@@ -42,3 +42,6 @@ gunicorn --bind 0.0.0.0:8000 app:app
    docker run -p 8000:8000 python-flask-demo
    ```
    The app will be at `http://localhost:8000`.
+
+
+See [Guide to deploy Flask app in seconds](https://seenode.com/docs/)
