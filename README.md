@@ -1,47 +1,25 @@
-# Minimal Python Flask App
+# Deploy Flask on Seenode in seconds
 
-A minimal Python Flask application to deploy on [Seenode](https://seenode.com).
+This is a repo for deploying a minimal but production-ready Python Flask application for deployment on [Seenode](https://seenode.com).
 
-## Key Features
+This example demonstrates how to deploy a simple Flask app using Gunicorn as the WSGI server for a robust production environment.
 
-- **Single File**: All code is in `app.py`.
-- **Dependencies**: `Flask` and `Gunicorn` are specified in `requirements.txt`.
-- **Containerized**: A `Dockerfile` is included for easy deployment.
-
-## How to Run
-
-### Locally
-
-1. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-2. **Run the App**:
-   ```bash
-   flask run
-   ```
-   The app will be at `http://127.0.0.1:5000`.
-
-### With Gunicorn
-
-To run in a production-like environment:
-```bash
-gunicorn --bind 0.0.0.0:8000 app:app
-```
-
-### With Docker
-
-1. **Build the Image**:
-   ```bash
-   docker build -t python-flask-demo .
-   ```
-
-2. **Run the Container**:
-   ```bash
-   docker run -p 8000:8000 python-flask-demo
-   ```
-   The app will be at `http://localhost:8000`.
+### Deploy in minutes
+View our [guide on deploying flask apps](https://seenode.com/docs/services/web-services/framework-guides/python/flask/) on [seenode](https://seenode.com) in seconds.
 
 
-See [Guide to deploy Flask app in seconds](https://seenode.com/docs/)
+## How to Deploy on Seenode
+
+1.  **Connect Your Repository**: Go to the [Seenode dashboard](https://cloud.seenode.com), select **New Web Service**, and choose this Git repository.
+2.  **Confirm Settings**: Seenode will detect the Python environment and suggest the correct commands.
+    *   **Build Command**: `pip install -r requirements.txt`
+    *   **Start Command**: `gunicorn app:app --bind 0.0.0.0:$PORT`
+3.  **Deploy**: Click **Create Web Service**.
+
+That's it! Your Flask app will be deployed and available at a public URL.
+
+### Key Features on Seenode
+
+*   **Production-Ready**: By using Gunicorn in the start command, you are running a production-grade server without any complex configuration.
+*   **Automatic Port Handling**: Seenode manages port assignments by injecting the `$PORT` environment variable, which Gunicorn uses automatically.
+*   **Seamless Scaling**: Scale your service horizontally or vertically with a few clicks from the Seenode dashboard as your traffic grows.
