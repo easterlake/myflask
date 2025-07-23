@@ -13,7 +13,7 @@ View our [guide on deploying flask apps](https://seenode.com/docs/services/web-s
 1.  **Connect Your Repository**: Go to the [Seenode dashboard](https://cloud.seenode.com), select **New Web Service**, and choose this Git repository.
 2.  **Confirm Settings**: Seenode will detect the Python environment and suggest the correct commands.
     *   **Build Command**: `pip install -r requirements.txt`
-    *   **Start Command**: `gunicorn app:app --bind 0.0.0.0:$PORT`
+    *   **Start Command**: `gunicorn app:app --bind 0.0.0.0:80`
 3.  **Deploy**: Click **Create Web Service**.
 
 That's it! Your Flask app will be deployed and available at a public URL.
@@ -21,5 +21,5 @@ That's it! Your Flask app will be deployed and available at a public URL.
 ### Key Features on Seenode
 
 *   **Production-Ready**: By using Gunicorn in the start command, you are running a production-grade server without any complex configuration.
-*   **Automatic Port Handling**: Seenode manages port assignments by injecting the `$PORT` environment variable, which Gunicorn uses automatically.
+*   **Port Binding**: This example is configured to listen on port 80. Ensure your application code binds to this port, which gunicorn will use.
 *   **Seamless Scaling**: Scale your service horizontally or vertically with a few clicks from the Seenode dashboard as your traffic grows.
