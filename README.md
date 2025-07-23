@@ -21,5 +21,5 @@ That's it! Your Flask app will be deployed and available at a public URL.
 ### Key Features on Seenode
 
 *   **Production-Ready**: By using Gunicorn in the start command, you are running a production-grade server without any complex configuration.
-*   **Port Binding**: This example is configured to listen on port 80. Ensure your application code binds to this port, which gunicorn will use.
+*   **Port Binding**: This example is configured to listen on port 80. Ensure your application code binds to this port, or whatever port you set when deploying your application.
 *   **Seamless Scaling**: Scale your service horizontally or vertically with a few clicks from the Seenode dashboard as your traffic grows.
