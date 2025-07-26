@@ -5,7 +5,7 @@ This is a repo for deploying a minimal but production-ready Python Flask applica
 This example demonstrates how to deploy a simple Flask app using Gunicorn as the WSGI server for a robust production environment.
 
 ### Deploy in minutes
-View our [guide on deploying flask apps](https://seenode.com/docs/services/web-services/framework-guides/python/flask/) on [seenode](https://seenode.com) in seconds.
+View our [guide on deploying flask apps](https://seenode.com/docs/frameworks/python/flask/) on [seenode](https://seenode.com) in seconds.
 
 
 ## How to Deploy on Seenode
